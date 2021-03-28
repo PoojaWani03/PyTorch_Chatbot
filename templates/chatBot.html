@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {% if tag=="greeting" %}
+    <img width="400" height="400" src="{{url_for('static', filename='intro.gif')}}" align="middle" />
+    {% elif tag=="goodbye" %}
+    <img width="400" height="400" src="{{url_for('static', filename='bye.gif')}}" align="middle" />
+    {% else %}
+    <img width="400" height="400" src="{{url_for('static', filename='money.gif')}}" align="middle" />
+    {% endif %}
+    <form  action="/" method="post">
+      <p>Enter Msg: <input type = "text" name = "Name" /></p>
+      <p>{{ answer }}</p>
+      <p><input type = "submit" value = "submit" /></p>
+    </form>
+  </body>
+</html>
